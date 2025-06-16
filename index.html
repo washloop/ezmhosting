@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EZM Hosting - Premium UK Server Hosting | Shared, VPS & Dedicated Servers</title>
-    <meta name="description" content="Professional server hosting services in the UK. Shared hosting, VPS, and dedicated servers with 99.9% uptime guarantee. Fast SSD storage, 24/7 support, and competitive pricing. Get your free quote today.">
-    <meta name="keywords" content="UK server hosting, VPS hosting, dedicated servers, shared hosting, web hosting UK, server hosting England, cloud hosting, managed hosting">
+    <title>EZM Hosting - Global Server Hosting | Shared, VPS & Dedicated Servers Worldwide</title>
+    <meta name="description" content="Professional server hosting services worldwide. Global data centers in US, Europe, Asia Pacific & more. Shared hosting, VPS, and dedicated servers with 99.9% uptime guarantee. Get your free quote today.">
+    <meta name="keywords" content="global server hosting, VPS hosting, dedicated servers, shared hosting, web hosting worldwide, cloud hosting, managed hosting, data centers">
 
-    <!-- Bootstrap 5 CSS -->
+        <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <!-- Analytics -->
     <script defer data-domain="ezmhosting.com" src="https://a.wshlp.net/js/script.js"></script>
@@ -57,6 +60,23 @@
             background-color: #2c3e50;
             color: white;
         }
+
+        #map {
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .location-card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .location-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
     </style>
 </head>
 <body>
@@ -91,8 +111,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">Premium UK Server Hosting Solutions</h1>
-                    <p class="lead mb-4">Power your business with enterprise-grade server hosting infrastructure. UK-based servers with lightning-fast SSD storage, 99.9% uptime guarantee, and 24/7 expert support. From affordable shared hosting to powerful dedicated servers.</p>
+                    <h1 class="display-4 fw-bold mb-4">Global Server Hosting Solutions</h1>
+                    <p class="lead mb-4">Power your business with enterprise-grade server hosting infrastructure across multiple continents. Choose from data centers in North America, Europe, Asia Pacific, and more. Lightning-fast NVMe SSD storage, 99.9% uptime guarantee, and 24/7 expert support worldwide.</p>
                     <a href="mailto:office@ezmhosting.com?subject=Hosting Quote Request" class="btn btn-primary btn-lg me-3">
                         <i class="fas fa-envelope me-2"></i>Request Quote
                     </a>
@@ -121,8 +141,8 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <i class="fas fa-headset feature-icon"></i>
-                    <h4>Expert UK-Based Support</h4>
-                    <p>24/7/365 technical support from certified server administrators. Average response time under 15 minutes with free server management included.</p>
+                    <h4>Global Expert Support</h4>
+                    <p>24/7/365 technical support from certified server administrators worldwide. Average response time under 15 minutes with free server management included.</p>
                 </div>
             </div>
         </div>
@@ -142,8 +162,8 @@
                     <div class="card hosting-card h-100">
                         <div class="card-body text-center">
                             <i class="fas fa-globe feature-icon"></i>
-                                                         <h5 class="card-title">UK Shared Hosting</h5>
-                             <p class="card-text">Perfect for WordPress, e-commerce, and business websites. Lightning-fast UK servers with cPanel and one-click installations.</p>
+                                                         <h5 class="card-title">Global Shared Hosting</h5>
+                             <p class="card-text">Perfect for WordPress, e-commerce, and business websites. Choose your preferred data center location with cPanel and one-click installations.</p>
                              <ul class="list-unstyled">
                                  <li><i class="fas fa-check text-success me-2"></i>Up to 100GB NVMe SSD Storage</li>
                                  <li><i class="fas fa-check text-success me-2"></i>Unlimited Bandwidth & Emails</li>
@@ -158,8 +178,8 @@
                     <div class="card hosting-card h-100">
                         <div class="card-body text-center">
                             <i class="fas fa-server feature-icon"></i>
-                                                         <h5 class="card-title">UK VPS Hosting</h5>
-                             <p class="card-text">Powerful virtual private servers with guaranteed resources. Full control with managed support for high-traffic applications.</p>
+                                                         <h5 class="card-title">Global VPS Hosting</h5>
+                             <p class="card-text">Powerful virtual private servers with guaranteed resources. Deploy in your preferred region with full control and managed support.</p>
                              <ul class="list-unstyled">
                                  <li><i class="fas fa-check text-success me-2"></i>Dedicated CPU & RAM Guaranteed</li>
                                  <li><i class="fas fa-check text-success me-2"></i>Ultra-Fast NVMe SSD Storage</li>
@@ -174,8 +194,8 @@
                     <div class="card hosting-card h-100">
                         <div class="card-body text-center">
                             <i class="fas fa-database feature-icon"></i>
-                                                         <h5 class="card-title">UK Dedicated Servers</h5>
-                             <p class="card-text">Enterprise-grade bare metal servers for mission-critical applications. Maximum performance with full hardware control.</p>
+                                                         <h5 class="card-title">Global Dedicated Servers</h5>
+                             <p class="card-text">Enterprise-grade bare metal servers for mission-critical applications. Deploy in multiple regions with maximum performance and full hardware control.</p>
                              <ul class="list-unstyled">
                                  <li><i class="fas fa-check text-success me-2"></i>Latest Intel/AMD Processors</li>
                                  <li><i class="fas fa-check text-success me-2"></i>Custom Server Configurations</li>
@@ -190,14 +210,100 @@
         </div>
     </section>
 
+    <!-- Server Locations Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Global Data Center Locations</h2>
+                    <p class="lead">Deploy your applications closer to your users with our worldwide infrastructure</p>
+                </div>
+            </div>
+
+            <!-- Interactive Map -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div id="map"></div>
+                </div>
+            </div>
+
+            <!-- Location Cards -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card location-card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-flag-usa text-primary mb-3" style="font-size: 2rem;"></i>
+                            <h5 class="card-title">North America</h5>
+                            <ul class="list-unstyled">
+                                <li>🇺🇸 Virginia (US East)</li>
+                                <li>🇺🇸 Oregon (US West)</li>
+                                <li>🇨🇦 Toronto (Canada Central)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card location-card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-flag text-primary mb-3" style="font-size: 2rem;"></i>
+                            <h5 class="card-title">Europe</h5>
+                            <ul class="list-unstyled">
+                                <li>🇬🇧 London</li>
+                                <li>🇩🇪 Frankfurt</li>
+                                <li>🇮🇪 Dublin</li>
+                                <li>🇫🇷 Paris</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card location-card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-globe-asia text-primary mb-3" style="font-size: 2rem;"></i>
+                            <h5 class="card-title">Asia Pacific</h5>
+                            <ul class="list-unstyled">
+                                <li>🇸🇬 Singapore</li>
+                                <li>🇯🇵 Tokyo</li>
+                                <li>🇦🇺 Sydney</li>
+                                <li>🇮🇳 Mumbai</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card location-card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-globe text-primary mb-3" style="font-size: 2rem;"></i>
+                            <h5 class="card-title">Other Regions</h5>
+                            <ul class="list-unstyled">
+                                <li>🇧🇷 São Paulo</li>
+                                <li>🇿🇦 Cape Town</li>
+                                <li>🇧🇭 Bahrain</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="text-muted">Choose the data center location closest to your users for optimal performance</p>
+                    <a href="mailto:office@ezmhosting.com?subject=Server Location Inquiry" class="btn btn-primary btn-lg">
+                        <i class="fas fa-map-marker-alt me-2"></i>Discuss Your Location Needs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h2 class="display-5 fw-bold mb-4">About EZM Hosting</h2>
-                    <p class="lead">EZM Hosting Limited is a UK-based server hosting company committed to providing reliable, scalable, and secure hosting solutions for businesses of all sizes.</p>
-                    <p>We combine cutting-edge technology with exceptional customer service to deliver hosting solutions that help your business grow and succeed online.</p>
+                    <p class="lead">EZM Hosting Limited is a global server hosting company committed to providing reliable, scalable, and secure hosting solutions for businesses of all sizes worldwide.</p>
+                    <p>With data centers across multiple continents, we combine cutting-edge technology with exceptional customer service to deliver hosting solutions that help your business grow and succeed online, wherever your customers are located.</p>
                 </div>
                 <div class="col-lg-6 text-center">
                     <i class="fas fa-building" style="font-size: 10rem; color: #667eea; opacity: 0.8;"></i>
@@ -271,5 +377,84 @@
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([30, 0], 2);
+
+        // Add tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 18,
+        }).addTo(map);
+
+        // Define server locations with coordinates
+        var locations = [
+            // North America
+            {lat: 38.9072, lng: -77.0369, name: "Virginia (US East)", region: "North America", icon: "🇺🇸"},
+            {lat: 45.5152, lng: -122.6784, name: "Oregon (US West)", region: "North America", icon: "🇺🇸"},
+            {lat: 43.6532, lng: -79.3832, name: "Toronto (Canada Central)", region: "North America", icon: "🇨🇦"},
+
+            // Europe
+            {lat: 51.5074, lng: -0.1278, name: "London", region: "Europe", icon: "🇬🇧"},
+            {lat: 50.1109, lng: 8.6821, name: "Frankfurt", region: "Europe", icon: "🇩🇪"},
+            {lat: 53.3498, lng: -6.2603, name: "Dublin", region: "Europe", icon: "🇮🇪"},
+            {lat: 48.8566, lng: 2.3522, name: "Paris", region: "Europe", icon: "🇫🇷"},
+
+            // Asia Pacific
+            {lat: 1.3521, lng: 103.8198, name: "Singapore", region: "Asia Pacific", icon: "🇸🇬"},
+            {lat: 35.6762, lng: 139.6503, name: "Tokyo", region: "Asia Pacific", icon: "🇯🇵"},
+            {lat: -33.8688, lng: 151.2093, name: "Sydney", region: "Asia Pacific", icon: "🇦🇺"},
+            {lat: 19.0760, lng: 72.8777, name: "Mumbai", region: "Asia Pacific", icon: "🇮🇳"},
+
+            // Other Regions
+            {lat: -23.5505, lng: -46.6333, name: "São Paulo", region: "South America", icon: "🇧🇷"},
+            {lat: -33.9249, lng: 18.4241, name: "Cape Town", region: "Africa", icon: "🇿🇦"},
+            {lat: 26.0667, lng: 50.5577, name: "Bahrain", region: "Middle East", icon: "🇧🇭"}
+        ];
+
+        // Custom icon for data centers
+        var serverIcon = L.divIcon({
+            html: '<div style="background: #667eea; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"><i class="fas fa-server"></i></div>',
+            className: 'custom-div-icon',
+            iconSize: [24, 24],
+            iconAnchor: [12, 12]
+        });
+
+        // Add markers for each location
+        locations.forEach(function(location) {
+            var marker = L.marker([location.lat, location.lng], {icon: serverIcon}).addTo(map);
+
+            var popupContent = `
+                <div style="text-align: center; min-width: 150px;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">${location.icon}</div>
+                    <h6 style="margin-bottom: 4px; font-weight: bold;">${location.name}</h6>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 12px;">${location.region}</p>
+                    <a href="mailto:office@ezmhosting.com?subject=Server Location: ${location.name}"
+                       style="background: #667eea; color: white; padding: 4px 8px; text-decoration: none; border-radius: 4px; font-size: 11px;">
+                        Request Quote
+                    </a>
+                </div>
+            `;
+
+            marker.bindPopup(popupContent);
+        });
+
+        // Add a legend
+        var legend = L.control({position: 'bottomright'});
+        legend.onAdd = function (map) {
+            var div = L.DomUtil.create('div', 'legend');
+            div.style.background = 'white';
+            div.style.padding = '10px';
+            div.style.borderRadius = '5px';
+            div.style.boxShadow = '0 2px 4px rgba(0,0,0,0.2)';
+            div.innerHTML = '<h6 style="margin: 0 0 8px 0;"><i class="fas fa-server" style="color: #667eea;"></i> EZM Data Centers</h6><small>Click markers for more info</small>';
+            return div;
+        };
+        legend.addTo(map);
+    </script>
 </body>
 </html>
